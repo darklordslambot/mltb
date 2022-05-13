@@ -63,27 +63,20 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("⚡INDEX LINK⚡", "https://unlimxdrive.tk")
-    buttons.buildbutton("🧲OUR MIRROR GROUP🧲", "https://t.me/nodirdrivebots")
+    buttons.buildbutton("⚡INDEX LINK⚡", "https://filmsandseries.filmsandtvseries.workers.dev/0:/")
+    buttons.buildbutton("📌Bot Owner📌", "https://t.me/Dark_LordSL")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-<b>Hi, I'm a Mirror Bot which can Mirror all your Torrents, Direct Links & Mega.nz Links to Google Drive!</b>
+<b>Hi, I'm a Mirror-Leech Bot which can Leech and Mirror all your Torrents, Direct Links & Mega.nz Links to Google Drive!</b>
 ⚡🔥🔥🔥🔥⚡
-<b>🆘For Any Issues & Ideas Contact My Owners :</b> @nodir_khajiev
-⚡🔥🔥🔥🔥⚡
-<b>🧲Mirror Group to Use :</b> Join <a href="https://t.me/nodirdrivebots">Group Link</a>
-⚡🔥🔥🔥🔥⚡
-<b>♻️GDrive Access Group :</b> Join <a href="https://groups.google.com/g/my_drive_members">Access Link</a>
-⚡🔥🔥🔥🔥⚡
-ℹ️Don't forget to join my GDrive Group to get access files
-🚫DON'T SHARE FILES ON OUTSIDE. SHARE ONLY ON OUR GROUP
+<b>🆘For Any Issues & Ideas Contact My Owners :</b> @Dark_LordSL
 ⚡🔥🔥🔥🔥⚡
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Oops. ACCESS DENIED.\n<b>You can use it in 🧲OUR MIRROR GROUP🧲. JOIN US!!!</b>', context.bot, update.message, reply_markup)
+        sendMarkup('Oops. ACCESS DENIED.\n<b>You can use it in 🧲OUR MIRROR-LEECH GROUP🧲. JOIN US!!!</b>', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
